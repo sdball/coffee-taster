@@ -20,8 +20,9 @@ def recompile_coffee
   Dir.glob("coffee/**/*.coffee").each do |f|
     code << IO.read(f)
   end
-  f = File.new('main.js', 'w')
-  f.write CoffeeScript.compile code.string
-  f.close
+  Dir.mkdir('js') unless Dir.exists? 'js'
+  File.open('js/main.js', 'w') do |f|
+    f.write CoffeeScript.compile code.string
+  end
   puts "Recompiled."
 end
