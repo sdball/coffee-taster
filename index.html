@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- shameless copy of http://twitter.github.com/bootstrap/examples/starter-template.html -->
+    <!-- (not entirely shameless) -->
+    <meta charset="utf-8">
+    <title>Coffee Taster</title>
+    <meta name="description" content="A starter playground for the Coffee Taster project.">
+    <meta name="author" content="Stephen Ball">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+
+  <body screen_capture_injected="true">
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="">Coffee Taster</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="https://github.com/sdball/coffee-taster">Fork me on Github</a></li>
+              <li><a href="http://twitter.com/stephenballnc">@stephenballnc</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Getting Started</h1>
+      <ol>
+        <li>In your terminal (in this project directory) run <code>rake watch</code></li>
+        <li>Then edit, create, and/or delete .coffee files in the coffee directory and they'll automatically compile into the "compiled.js" already included in this file.</li>
+      </ol>
+    </div> <!-- /container -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <!-- compiled.js is the CoffeeScript compilation file -->
+    <!-- even if you get rid of everything else in this file, you probably want to keep this -->
+    <script src="js/compiled.js"></script>
+</body>
+</html>
