@@ -26,3 +26,7 @@ bundle install
 Now you can follow along with just about any CoffeeScript tutorial without
 having to do anything else. No Node.js to install, no new terminal scripts to
 figure out.
+
+## TODO
+
+- Tests!
