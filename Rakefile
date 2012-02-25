@@ -1,6 +1,11 @@
 require 'rake'
+require 'rspec/core/rake_task'
 require 'stringio'
-require 'coffee-script'
+require 'coffee_taster'
+
+RSpec::Core::RakeTask.new
+task :default => :spec
+task :test => :spec
 
 OUTPUT_JS = 'js/compiled.js'
 COFFEE_DIR = 'coffee'
@@ -37,11 +42,6 @@ def compile_coffee
   end
   Dir.mkdir('js') unless Dir.exists? 'js'
   File.open(OUTPUT_JS, 'w') do |f|
-    begin
-      f.write CoffeeScript.compile code.string
-      puts "Recompiled Successfully."
-    rescue ExecJS::RuntimeError => e
-      puts e
-    end
+    f.write CoffeeTaster.compile code.string
   end
 end
