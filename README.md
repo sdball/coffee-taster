@@ -29,7 +29,7 @@ figure out.
 
 ## TODO
 
-- Tests!
+- Report the actual CoffeeScript file with a syntax error
 
 ## Similar Projects
 
