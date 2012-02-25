@@ -11,4 +11,8 @@ describe CoffeeTaster do
     coffeescript = trim_whitespace(coffeescript)
     coffeescript.should == '(function(){alert("hi");}).call(this);'
   end
+  it "should compile invalid CoffeeScript into error highlighting JavaScript" do
+    coffeescript = CoffeeTaster.compile('alert("hi"')
+    coffeescript.should =~ /alert\("CoffeeScript compilation error: SyntaxError: missing \) on line 1/
+  end
 end
