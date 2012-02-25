@@ -28,7 +28,6 @@ end
 def recompile_coffee
   puts "Changes detected, recompiling"
   compile_coffee
-  puts "Recompiled."
 end
 
 def compile_coffee
@@ -38,6 +37,11 @@ def compile_coffee
   end
   Dir.mkdir('js') unless Dir.exists? 'js'
   File.open(OUTPUT_JS, 'w') do |f|
-    f.write CoffeeScript.compile code.string
+    begin
+      f.write CoffeeScript.compile code.string
+      puts "Recompiled Successfully."
+    rescue ExecJS::RuntimeError => e
+      puts e
+    end
   end
 end
