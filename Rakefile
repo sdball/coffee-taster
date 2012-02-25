@@ -1,6 +1,10 @@
 require 'rake'
+require 'rspec/core/rake_task'
 require 'stringio'
-require 'coffee-script'
+
+RSpec::Core::RakeTask.new
+task :default => :spec
+task :test => :spec
 
 OUTPUT_JS = 'js/compiled.js'
 COFFEE_DIR = 'coffee'
