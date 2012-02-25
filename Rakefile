@@ -1,6 +1,7 @@
 require 'rake'
 require 'rspec/core/rake_task'
 require 'stringio'
+require 'coffee_taster'
 
 RSpec::Core::RakeTask.new
 task :default => :spec
@@ -42,6 +43,6 @@ def compile_coffee
   end
   Dir.mkdir('js') unless Dir.exists? 'js'
   File.open(OUTPUT_JS, 'w') do |f|
-    f.write CoffeeScript.compile code.string
+    f.write CoffeeTaster.compile code.string
   end
 end
