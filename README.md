@@ -30,3 +30,10 @@ figure out.
 ## TODO
 
 - Tests!
+
+## Similar Projects
+
+If you're looking for a more full featured automatic CoffeeScript compiler.
+
+- [Guard::CoffeeScript](https://github.com/netzpirat/guard-coffeescript) - A gem that integrates with guard to automatically recompile a project's CoffeeScript.
+
