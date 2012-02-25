@@ -4,3 +4,7 @@ source 'http://rubygems.org'
 gem 'rake'
 gem 'coffee-script'
 gem 'fssm'
+
+group :test do
+  gem 'rspec'
+end
