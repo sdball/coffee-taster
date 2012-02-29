@@ -1,4 +1,4 @@
-# Coffee Taster
+# Coffee Taster [![Build Status](https://secure.travis-ci.org/sdball/coffee-taster.png?branch=master)](http://travis-ci.org/sdball/coffee-taster)
 
 An easy to install, easy to use CoffeeScript playground.
 
