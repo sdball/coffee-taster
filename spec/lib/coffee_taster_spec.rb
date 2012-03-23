@@ -12,7 +12,12 @@ describe CoffeeTaster do
     coffeescript.should == '(function(){alert("hi");}).call(this);'
   end
   it "should compile invalid CoffeeScript into error highlighting JavaScript" do
-    coffeescript = CoffeeTaster.compile('alert("hi"')
-    coffeescript.should =~ /alert\("CoffeeScript compilation error: SyntaxError: missing \) on line 1/
+    invalid_js_examples = [
+      'alert("hi"',
+      "$('.foo').data('bar') = 0"
+    ]
+    invalid_js_examples.each do |invalid|
+      CoffeeTaster.compile(invalid).should match(/CoffeeScript compilation error/)
+    end
   end
 end
