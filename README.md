@@ -9,7 +9,7 @@ An easy to install, easy to use CoffeeScript playground.
 ## Installation
 
 ```
-git clone git://github.com/sdball/coffee-taster.git`
+git clone git://github.com/sdball/coffee-taster.git
 cd coffee-taster
 rvm gemset name  # should report coffee-taster
 gem install bundler
